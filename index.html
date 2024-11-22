@@ -4,183 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <title>Portfolio</title>
+    <title>Portfolio - Nikhil Dubey</title>
+    <style>
+        .home__title-color {
+            color: #007bff;
+        }
+
+        .skills__icon {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .footer__social a {
+            margin: 0 10px;
+            color: #007bff;
+            font-size: 1.2rem;
+        }
+
+        .home__img img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+    <!-- Header Section -->
+    <header class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
             </div>
         </nav>
     </header>
-    <main class="l-main">
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Nikhil</span><br>Python Developer
-                </h1>
-                <a href="tel:+8840425661" class="button">Contact</a>
-            </div>
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/" class="home__social-icon" target="_blank">
-                    <i class='bx bxl-linkedin'></i>
-                </a>
-                <a href="https://github.com/NIKHIL-58" class="home__social-icon" target="_blank">
-                    <i class='bx bxl-github'></i>
-                </a>
-            </div>
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <mask id="mask0" mask-type="alpha">
-                        <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                        <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                        <image class="home__blob-img" x="50" y="60" href="assets/img/nikilpic.png" />
-                    </g>
-                </svg>
-            </div>
-        </section>
-        <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/about.jpg" alt="About Image">
+
+    <!-- Home Section -->
+    <section class="home text-center py-5 bg-light" id="home">
+        <div class="container">
+            <h1 class="home__title">Hi, I'm <span class="home__title-color">Nikhil</span></h1>
+            <p class="lead">Python Developer & Machine Learning Enthusiast</p>
+            <a href="tel:+8840425661" class="btn btn-primary mt-3">Contact</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about py-5" id="about">
+        <div class="container">
+            <h2 class="text-center mb-4">About</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="assets/img/about.jpg" class="img-fluid rounded" alt="About Image">
                 </div>
-                <div>
-                    <h2 class="about__subtitle">I'am Nikhil</h2>
-                    <p class="about__text">
-                        My expertise in Python and FastAPI or Flask framework. My approach combined innovative machine
-                        learning model or techniques with robust programming skills, significantly enhancing user
-                        engagement through personalized content. This achievement underscores my commitment to
-                        delivering impactful software solutions and my ability to work collaboratively within a team
+                <div class="col-md-8">
+                    <h3>I'm Nikhil</h3>
+                    <p>
+                        My expertise lies in Python and frameworks like FastAPI and Flask. With experience in developing
+                        innovative machine learning solutions, I aim to create robust and impactful software that drives user engagement.
                     </p>
                 </div>
             </div>
-        </section>
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text">A skilled data scientist with a deep understanding of statistics,
-                        programming, and machine learning, capable of
-                        analyzing complex data sets and providing insights that drive business decisions. To build a
-                        career as a data engineer, working on complex data
-                        infrastructure projects that require innovative solutions.</p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <span class="skills__name">Python</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <span class="skills__name">FastAPI</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <span class="skills__name">Flask</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-                        </div>
-                        <div>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <span class="skills__name">Machine Learning</span>
-                        </div>
-                        <div class="skills__bar skills__js">
-                        </div>
-                        <div>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">C++</span>
-                        </div>
-                        <div class="skills__bar skills__ux">
-                        </div>
-                        <div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                </div>
-            </div>
-        </section>
-        <section class="work section" id="work">
-            <h2 class="section-title">Project</h2>
-            <div class="work__container bd-grid">
-                <a href="" class="work__img">
-                    <img src="assets/img/work1.jpg" alt="1" loading="lazy">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work3.jpg" alt="2">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work2.jpg" alt="3">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work4.jpg" alt="4">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work5.jpg" alt="5">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work6.jpg" alt="6">
-                </a>
-            </div>
-        </section>
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    <input type="submit" value="Submit" class="contact__button button">
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <p class="footer__title">Nikhil</p>
-        <div class="footer__social">
-            <a href="https://www.facebook.com" class="footer__icon"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.x.com" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-            <a href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/" class="footer__icon"><i
-                    class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/NIKHIL-58" class="footer__icon"><i class='bx bxl-github'></i></a>
         </div>
-        <p class="footer__copy">&#169; Nikhil Dubey. All rigths reserved</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills bg-light py-5" id="skills">
+        <div class="container">
+            <h2 class="text-center mb-4">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Professional Skills</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class='bx bx-code skills__icon'></i> Python</li>
+                        <li class="list-group-item"><i class='bx bx-network-chart skills__icon'></i> FastAPI</li>
+                        <li class="list-group-item"><i class='bx bx-server skills__icon'></i> Flask</li>
+                        <li class="list-group-item"><i class='bx bx-brain skills__icon'></i> Machine Learning</li>
+                        <li class="list-group-item"><i class='bx bx-code-alt skills__icon'></i> C++</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/img/work3.jpg" class="img-fluid rounded" alt="Skills Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects py-5" id="projects">
+        <div class="container">
+            <h2 class="text-center mb-4">Projects</h2>
+            <div id="projects-container" class="row gy-4"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact py-5 bg-light" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact</h2>
+            <form action="#" class="w-75 mx-auto">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__title">Nikhil Dubey</p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/NIKHIL-58" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+        <p>&#169; 2024 Nikhil Dubey. All rights reserved.</p>
     </footer>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="assets/js/main.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fetch and Display GitHub Projects
+        fetch("https://api.github.com/users/NIKHIL-58/repos")
+            .then(response => response.json())
+            .then(repos => {
+                const container = document.getElementById("projects-container");
+                repos.forEach(repo => {
+                    const project = `
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">${repo.name}</h5>
+                                    <p class="card-text">${repo.description || "No description provided."}</p>
+                                    <a href="${repo.html_url}" target="_blank" class="btn btn-primary">View Project</a>
+                                </div>
+                            </div>
+                        </div>`;
+                    container.innerHTML += project;
+                });
+            })
+            .catch(error => console.error("Error fetching GitHub repositories:", error));
+    </script>
 </body>
 
 </html>
