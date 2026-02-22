@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +19,7 @@
 <body data-bs-spy="scroll" data-bs-target="#topNav" data-bs-offset="100" tabindex="0">
 
   <!-- NAVBAR -->
-  <nav id="topNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+  <nav id="topNav" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home">Nikhil Dubey</a>
 
@@ -34,74 +33,72 @@
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
 
-        <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
-          <a class="btn btn-outline-light btn-sm" href="assets/Nikhil_Backend_Resume.pdf" download>
+        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-outline-primary btn-sm" href="assets/Nikhil_Backend_Resume.pdf" download>
             <i class="fas fa-download me-1"></i> Resume
           </a>
+
+          <!-- Theme toggle -->
+          <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button" aria-label="Toggle theme">
+            <i id="themeIcon" class="fas fa-moon"></i>
+          </button>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header id="home" class="hero-section text-light">
+  <header id="home" class="hero-section">
     <div class="container hero-inner">
       <div class="row align-items-center gy-5">
         <div class="col-lg-7">
           <p class="hero-badge mb-3">
-            <span class="badge text-bg-warning text-dark">Backend Engineer (Python)</span>
-            <span class="badge text-bg-secondary">FastAPI</span>
-            <span class="badge text-bg-secondary">Flask</span>
-            <span class="badge text-bg-secondary">AWS</span>
+            <span class="badge badge-accent">Backend Engineer (Python)</span>
+            <span class="badge badge-soft">FastAPI</span>
+            <span class="badge badge-soft">Flask</span>
+            <span class="badge badge-soft">AWS</span>
+            <span class="badge badge-soft">PostgreSQL</span>
           </p>
 
           <h1 class="display-5 fw-bold mb-3">
-            Hi, I’m <span class="text-warning">Nikhil Dubey</span>
+            Hi, I’m <span class="text-accent">Nikhil Dubey</span>
           </h1>
 
-          <p class="lead text-light-emphasis mb-4">
+          <p class="lead text-muted-1 mb-4">
             I build scalable REST APIs, real-time marketplace integrations (Amazon SP-API / Shopify),
-            and data systems using Python, PostgreSQL, MongoDB, and AWS.
+            and reliable backend systems using Python, PostgreSQL, MongoDB, and AWS.
           </p>
 
           <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-warning btn-lg" href="#contact">
+            <a class="btn btn-accent btn-lg" href="#contact">
               <i class="fas fa-paper-plane me-2"></i> Contact Me
             </a>
 
-            <a class="btn btn-outline-light btn-lg" href="assets/Nikhil_Backend_Resume.pdf" download>
+            <a class="btn btn-outline-primary btn-lg" href="assets/Nikhil_Backend_Resume.pdf" download>
               <i class="fas fa-download me-2"></i> Download Resume
             </a>
 
-            <a class="btn btn-outline-light btn-lg" target="_blank" rel="noreferrer"
+            <a class="btn btn-outline-secondary btn-lg" target="_blank" rel="noreferrer"
               href="https://github.com/NIKHIL-58">
               <i class="fab fa-github me-2"></i> GitHub
             </a>
 
-            <a class="btn btn-outline-light btn-lg" target="_blank" rel="noreferrer"
+            <a class="btn btn-outline-secondary btn-lg" target="_blank" rel="noreferrer"
               href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/">
               <i class="fab fa-linkedin me-2"></i> LinkedIn
             </a>
           </div>
 
           <div class="hero-highlights mt-4">
-            <div class="highlight">
-              <i class="fas fa-bolt"></i>
-              <span>Reliable sync flows: rate limits, retries/backoff, token lifecycle</span>
-            </div>
-            <div class="highlight">
-              <i class="fas fa-shield-alt"></i>
-              <span>Auth: JWT, RBAC, OTP</span>
-            </div>
-            <div class="highlight">
-              <i class="fas fa-cloud"></i>
-              <span>Deployment: AWS EC2, RDS, Amplify</span>
-            </div>
+            <div class="highlight"><i class="fas fa-bolt"></i><span>Rate limits, retries/backoff, token lifecycle</span></div>
+            <div class="highlight"><i class="fas fa-shield-alt"></i><span>Auth: JWT, RBAC, OTP</span></div>
+            <div class="highlight"><i class="fas fa-cloud"></i><span>AWS: EC2, RDS, Amplify</span></div>
           </div>
         </div>
 
@@ -109,23 +106,21 @@
           <div class="hero-card">
             <div class="hero-card-top">
               <div class="avatar-ring">
-                <!-- Optional: replace with your photo -->
                 <img src="assets/img/nikilpic.png" alt="Nikhil Dubey" onerror="this.style.display='none'">
-                <div class="avatar-fallback">
-                  <i class="fas fa-user"></i>
-                </div>
+                <div class="avatar-fallback"><i class="fas fa-user"></i></div>
               </div>
+
               <div>
                 <h5 class="mb-1 fw-bold">Nikhil Dubey</h5>
-                <p class="mb-0 text-light-emphasis">Python • FastAPI • Flask • AWS</p>
+                <p class="mb-0 text-muted-1">Python • FastAPI • Flask • AWS</p>
               </div>
             </div>
 
-            <hr class="border-secondary my-4">
+            <hr class="hr-soft my-4">
 
             <div class="hero-metrics">
               <div class="metric">
-                <div class="metric-title">Focus</div>
+                <div class="metric-title">Primary</div>
                 <div class="metric-value">Backend APIs</div>
               </div>
               <div class="metric">
@@ -137,19 +132,22 @@
                 <div class="metric-value">PostgreSQL, MongoDB</div>
               </div>
               <div class="metric">
-                <div class="metric-title">Cloud</div>
+                <div class="metric-title">Deployment</div>
                 <div class="metric-value">AWS</div>
               </div>
             </div>
 
             <div class="mt-4 d-grid gap-2">
-              <a class="btn btn-outline-light" href="#projects">
+              <a class="btn btn-outline-secondary" href="#projects">
                 <i class="fas fa-code me-2"></i> View Projects
               </a>
+              <a class="btn btn-outline-secondary" href="#services">
+                <i class="fas fa-briefcase me-2"></i> Services
+              </a>
             </div>
+
           </div>
         </div>
-
       </div>
     </div>
   </header>
@@ -167,9 +165,9 @@
         <div class="col-lg-7">
           <h2 class="section-title mb-3">About Me</h2>
           <p class="text-muted mb-3">
-            I’m a backend engineer focused on building production-grade REST APIs, data pipelines,
-            and marketplace sync systems. I’ve worked on real-time SKU inventory/pricing/order sync,
-            analytics services, authentication systems (JWT/RBAC/OTP), and deployments on AWS.
+            Backend engineer focused on production-grade REST APIs, data pipelines, and marketplace sync systems.
+            Experienced with real-time inventory/pricing/order sync, analytics services, secure authentication
+            (JWT/RBAC/OTP), and AWS deployments.
           </p>
 
           <div class="row g-3">
@@ -214,6 +212,7 @@
                 </div>
               </div>
             </div>
+
           </div>
 
         </div>
@@ -222,7 +221,7 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section-pad bg-light">
+  <section id="skills" class="section-pad">
     <div class="container">
       <h2 class="section-title text-center mb-4">Skills</h2>
 
@@ -253,7 +252,6 @@
                 <span class="skill-tag">MongoDB Atlas</span>
                 <span class="skill-tag">SQLite</span>
                 <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Schema Design</span>
                 <span class="skill-tag">Indexing</span>
               </div>
             </div>
@@ -287,7 +285,6 @@
                 <span class="skill-tag">Rate Limiting</span>
                 <span class="skill-tag">Retries / Backoff</span>
                 <span class="skill-tag">Token Lifecycle</span>
-                <span class="skill-tag">Logging</span>
               </div>
             </div>
           </div>
@@ -302,8 +299,93 @@
                 <span class="skill-tag">Shopify API</span>
                 <span class="skill-tag">Webhooks</span>
                 <span class="skill-tag">Background Jobs</span>
-                <span class="skill-tag">ETL / Data Sync</span>
+                <span class="skill-tag">ETL / Sync</span>
               </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (NEW) -->
+  <section id="services" class="section-pad">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Services</h2>
+      <p class="text-center text-muted mb-5">
+        What I can build for you — production-ready backend systems, integrations, and deployments.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 service-card">
+            <div class="card-body">
+              <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+              <h5 class="fw-bold">API Development</h5>
+              <p class="text-muted mb-0">
+                FastAPI/Flask REST APIs, clean architecture, validation, pagination, docs (Swagger).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 service-card">
+            <div class="card-body">
+              <div class="service-icon"><i class="fas fa-plug"></i></div>
+              <h5 class="fw-bold">Marketplace Integrations</h5>
+              <p class="text-muted mb-0">
+                Amazon SP-API + Shopify integrations, webhooks, sync flows, retries/backoff, rate-limits.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 service-card">
+            <div class="card-body">
+              <div class="service-icon"><i class="fas fa-database"></i></div>
+              <h5 class="fw-bold">Database & Performance</h5>
+              <p class="text-muted mb-0">
+                PostgreSQL schema design, indexing, migrations, query optimization, data modeling.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 service-card">
+            <div class="card-body">
+              <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+              <h5 class="fw-bold">Authentication & Security</h5>
+              <p class="text-muted mb-0">
+                JWT auth, RBAC, OTP, secure admin dashboards, role management, best practices.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 service-card">
+            <div class="card-body">
+              <div class="service-icon"><i class="fas fa-cloud"></i></div>
+              <h5 class="fw-bold">AWS Deployment</h5>
+              <p class="text-muted mb-0">
+                Deploy backend to EC2, DB to RDS, env setup, logging, monitoring, scaling basics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 service-card">
+            <div class="card-body">
+              <div class="service-icon"><i class="fas fa-cogs"></i></div>
+              <h5 class="fw-bold">Automation & ETL</h5>
+              <p class="text-muted mb-0">
+                Scheduled sync jobs, data pipelines, reporting endpoints, robust error handling.
+              </p>
             </div>
           </div>
         </div>
@@ -326,14 +408,14 @@
                 <h5 class="fw-bold mb-1">Backend Developer — Phormula</h5>
                 <div class="text-muted small">Mar 2025 – Present</div>
               </div>
-              <span class="badge text-bg-dark">Python • AWS • APIs</span>
+              <span class="badge badge-soft">Python • AWS • APIs</span>
             </div>
             <ul class="mt-3 mb-0">
-              <li>Built marketplace analytics platform integrating Amazon SP-API + Shopify for real-time SKU sync.</li>
-              <li>Developed REST APIs for inventory, pricing analytics, order tracking, and reporting.</li>
-              <li>Migrated SQLite to PostgreSQL (AWS RDS) and improved schema / performance.</li>
-              <li>Implemented secure admin features using JWT + RBAC + OTP authentication.</li>
-              <li>Improved reliability with throttling, retries/backoff, and token lifecycle handling.</li>
+              <li>Marketplace analytics platform integrating Amazon SP-API + Shopify for real-time SKU sync.</li>
+              <li>REST APIs for inventory, pricing analytics, order tracking, reporting.</li>
+              <li>Migrated SQLite → PostgreSQL (AWS RDS), improved schema and performance.</li>
+              <li>Auth: JWT + RBAC + OTP.</li>
+              <li>Reliability: throttling, retries/backoff, token lifecycle handling.</li>
             </ul>
           </div>
         </div>
@@ -346,12 +428,12 @@
                 <h5 class="fw-bold mb-1">API Developer — Seven Square Technosoft</h5>
                 <div class="text-muted small">Jul 2024 – Mar 2025</div>
               </div>
-              <span class="badge text-bg-dark">FastAPI • Deployment</span>
+              <span class="badge badge-soft">FastAPI • Deployment</span>
             </div>
             <ul class="mt-3 mb-0">
-              <li>Developed FastAPI services for transcription and automated PDF generation.</li>
-              <li>Worked on real-time streaming integrations and deployment migration workflows.</li>
-              <li>Improved debugging and documentation for smoother releases.</li>
+              <li>FastAPI services for transcription + PDF generation.</li>
+              <li>Streaming integrations and deployment migrations.</li>
+              <li>Debugging + documentation improvements for smoother releases.</li>
             </ul>
           </div>
         </div>
@@ -361,30 +443,101 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section-pad bg-light">
+  <section id="projects" class="section-pad">
     <div class="container">
       <h2 class="section-title text-center mb-4">Projects</h2>
+      <p class="text-center text-muted mb-5">
+        Here are some of my projects. Public repos are linked, private work is available on request.
+      </p>
 
       <div class="row g-4">
 
+        <!-- 1) Portfolio (PUBLIC) -->
         <div class="col-md-6 col-lg-4">
           <div class="card clean-card h-100 project-card">
-            <img src="assets/img/snap ai.png" class="card-img-top" alt="Marketplace Analytics"
+            <img src="assets/img/work1.jpg" class="card-img-top" alt="Portfolio Website"
               onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="fw-bold">Portfolio Website</h5>
+              <p class="text-muted mb-3">
+                Personal portfolio built with clean UI, sections, animations, and responsive layout.
+              </p>
+              <div class="tag-wrap mb-3">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Bootstrap</span>
+              </div>
+              <a href="https://github.com/NIKHIL-58/nikhilprofile" target="_blank" rel="noreferrer"
+                class="btn btn-outline-primary w-100">
+                <i class="fab fa-github me-2"></i> View Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2) Data Visualization Dashboard (PUBLIC) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 project-card">
+            <img src="assets/img/data.png" class="card-img-top" alt="Data Visualization Dashboard"
+              onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="fw-bold">Data Visualization Dashboard</h5>
+              <p class="text-muted mb-3">
+                Flask-based app with dynamic filtering and interactive visualizations.
+              </p>
+              <div class="tag-wrap mb-3">
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Charts</span>
+              </div>
+              <a href="https://github.com/NIKHIL-58/data_visualization_dashboards" target="_blank" rel="noreferrer"
+                class="btn btn-outline-primary w-100">
+                <i class="fab fa-github me-2"></i> View Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3) Film Fusion (PUBLIC) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 project-card">
+            <img src="assets/img/work3.jpg" class="card-img-top" alt="Film Fusion"
+              onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="fw-bold">Film Fusion</h5>
+              <p class="text-muted mb-3">
+                Real-time web app with user-tailored movie recommendations.
+              </p>
+              <div class="tag-wrap mb-3">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Web App</span>
+                <span class="skill-tag">Recommendations</span>
+              </div>
+              <a href="https://github.com/NIKHIL-58/Film-fusion" target="_blank" rel="noreferrer"
+                class="btn btn-outline-primary w-100">
+                <i class="fab fa-github me-2"></i> View Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional: Add private projects as "On Request" -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 project-card">
             <div class="card-body">
               <h5 class="fw-bold">Marketplace Analytics Platform</h5>
               <p class="text-muted mb-3">
-                Real-time inventory/pricing/order sync using Amazon SP-API + Shopify with PostgreSQL and AWS deployment.
+                Amazon SP-API + Shopify real-time SKU sync, analytics, AWS deployment.
               </p>
               <div class="tag-wrap mb-3">
-                <span class="skill-tag">FastAPI/Flask</span>
                 <span class="skill-tag">SP-API</span>
                 <span class="skill-tag">Shopify</span>
-                <span class="skill-tag">PostgreSQL</span>
                 <span class="skill-tag">AWS</span>
+                <span class="skill-tag">PostgreSQL</span>
               </div>
-              <a href="https://github.com/NIKHIL-58" target="_blank" rel="noreferrer" class="btn btn-dark w-100">
-                View on GitHub
+              <a href="#contact" class="btn btn-outline-secondary w-100">
+                <i class="fas fa-lock me-2"></i> Private / On Request
               </a>
             </div>
           </div>
@@ -392,21 +545,18 @@
 
         <div class="col-md-6 col-lg-4">
           <div class="card clean-card h-100 project-card">
-            <img src="assets/img/data.png" class="card-img-top" alt="SmartHire"
-              onerror="this.style.display='none'">
             <div class="card-body">
               <h5 class="fw-bold">SmartHire (AI Resume Screening)</h5>
               <p class="text-muted mb-3">
-                Resume ingestion + structured extraction + candidate scoring pipeline with JWT auth and MongoDB.
+                Resume parsing + scoring + shortlist workflow with JWT and database.
               </p>
               <div class="tag-wrap mb-3">
                 <span class="skill-tag">FastAPI</span>
                 <span class="skill-tag">MongoDB</span>
                 <span class="skill-tag">JWT</span>
-                <span class="skill-tag">Scoring</span>
               </div>
-              <a href="https://github.com/NIKHIL-58" target="_blank" rel="noreferrer" class="btn btn-dark w-100">
-                View on GitHub
+              <a href="#contact" class="btn btn-outline-secondary w-100">
+                <i class="fas fa-lock me-2"></i> Private / On Request
               </a>
             </div>
           </div>
@@ -414,21 +564,18 @@
 
         <div class="col-md-6 col-lg-4">
           <div class="card clean-card h-100 project-card">
-            <img src="assets/img/work3.jpg" class="card-img-top" alt="NLP Key Insights API"
-              onerror="this.style.display='none'">
             <div class="card-body">
               <h5 class="fw-bold">NLP Key Insights API</h5>
               <p class="text-muted mb-3">
-                Transformer-based summarization + keyword extraction API with clean endpoints and scalable patterns.
+                Summarization + keyword extraction API with scalable endpoint patterns.
               </p>
               <div class="tag-wrap mb-3">
-                <span class="skill-tag">FastAPI</span>
                 <span class="skill-tag">NLP</span>
                 <span class="skill-tag">Transformers</span>
-                <span class="skill-tag">Async</span>
+                <span class="skill-tag">FastAPI</span>
               </div>
-              <a href="https://github.com/NIKHIL-58" target="_blank" rel="noreferrer" class="btn btn-dark w-100">
-                View on GitHub
+              <a href="#contact" class="btn btn-outline-secondary w-100">
+                <i class="fas fa-lock me-2"></i> Private / On Request
               </a>
             </div>
           </div>
@@ -476,7 +623,7 @@
                 </div>
               </div>
 
-              <hr class="my-4">
+              <hr class="my-4 hr-soft">
 
               <div class="d-flex gap-3">
                 <a href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/" class="social-btn" target="_blank" rel="noreferrer">
@@ -484,12 +631,6 @@
                 </a>
                 <a href="https://github.com/NIKHIL-58" class="social-btn" target="_blank" rel="noreferrer">
                   <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="social-btn" aria-label="Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-btn" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
                 </a>
               </div>
 
@@ -502,7 +643,7 @@
             <div class="card-body">
               <h5 class="fw-bold mb-3">Send a message</h5>
 
-              <!-- Simple mailto form (works without backend) -->
+              <!-- Simple mailto form (no backend needed) -->
               <form id="contactForm" class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label">Your Name</label>
@@ -521,12 +662,11 @@
 
                 <div class="col-12">
                   <label class="form-label">Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Write your message..."
-                    required></textarea>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Write your message..." required></textarea>
                 </div>
 
                 <div class="col-12">
-                  <button type="submit" class="btn btn-dark btn-lg w-100">
+                  <button type="submit" class="btn btn-outline-primary btn-lg w-100">
                     <i class="fas fa-paper-plane me-2"></i> Send
                   </button>
                   <p class="small text-muted mt-2 mb-0">
@@ -544,18 +684,18 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-4 bg-dark text-light">
+  <footer class="py-4">
     <div class="container text-center">
       <div class="mb-2">
         <strong>Nikhil Dubey</strong> • Backend Engineer (Python)
       </div>
-      <div class="text-light-emphasis small">
+      <div class="text-muted small">
         © <span id="year"></span> All Rights Reserved.
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- ScrollReveal -->
@@ -564,5 +704,4 @@
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 </body>
-
 </html>
