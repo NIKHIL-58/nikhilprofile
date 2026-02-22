@@ -2,214 +2,567 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Nikhil Dubey</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Boxicons -->
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Nikhil Dubey</title>
 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Nikhil Dubey</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+<body data-bs-spy="scroll" data-bs-target="#topNav" data-bs-offset="100" tabindex="0">
+
+  <!-- NAVBAR -->
+  <nav id="topNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Nikhil Dubey</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-outline-light btn-sm" href="assets/Nikhil_Backend_Resume.pdf" download>
+            <i class="fas fa-download me-1"></i> Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero-section text-light">
+    <div class="container hero-inner">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <p class="hero-badge mb-3">
+            <span class="badge text-bg-warning text-dark">Backend Engineer (Python)</span>
+            <span class="badge text-bg-secondary">FastAPI</span>
+            <span class="badge text-bg-secondary">Flask</span>
+            <span class="badge text-bg-secondary">AWS</span>
+          </p>
+
+          <h1 class="display-5 fw-bold mb-3">
+            Hi, I’m <span class="text-warning">Nikhil Dubey</span>
+          </h1>
+
+          <p class="lead text-light-emphasis mb-4">
+            I build scalable REST APIs, real-time marketplace integrations (Amazon SP-API / Shopify),
+            and data systems using Python, PostgreSQL, MongoDB, and AWS.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-warning btn-lg" href="#contact">
+              <i class="fas fa-paper-plane me-2"></i> Contact Me
+            </a>
+
+            <a class="btn btn-outline-light btn-lg" href="assets/Nikhil_Backend_Resume.pdf" download>
+              <i class="fas fa-download me-2"></i> Download Resume
+            </a>
+
+            <a class="btn btn-outline-light btn-lg" target="_blank" rel="noreferrer"
+              href="https://github.com/NIKHIL-58">
+              <i class="fab fa-github me-2"></i> GitHub
+            </a>
+
+            <a class="btn btn-outline-light btn-lg" target="_blank" rel="noreferrer"
+              href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/">
+              <i class="fab fa-linkedin me-2"></i> LinkedIn
+            </a>
+          </div>
+
+          <div class="hero-highlights mt-4">
+            <div class="highlight">
+              <i class="fas fa-bolt"></i>
+              <span>Reliable sync flows: rate limits, retries/backoff, token lifecycle</span>
             </div>
+            <div class="highlight">
+              <i class="fas fa-shield-alt"></i>
+              <span>Auth: JWT, RBAC, OTP</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-cloud"></i>
+              <span>Deployment: AWS EC2, RDS, Amplify</span>
+            </div>
+          </div>
         </div>
-    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="bg-dark text-light text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Hi, I'm <span class="text-warning">Nikhil Dubey</span></h1>
-            <p class="lead">Python Developer | API Specialist | Data Enthusiast</p>
-            <a href="tel:+918840425661" class="btn btn-warning btn-lg">Contact Me</a>
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <div class="avatar-ring">
+                <!-- Optional: replace with your photo -->
+                <img src="assets/img/nikilpic.png" alt="Nikhil Dubey" onerror="this.style.display='none'">
+                <div class="avatar-fallback">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-1 fw-bold">Nikhil Dubey</h5>
+                <p class="mb-0 text-light-emphasis">Python • FastAPI • Flask • AWS</p>
+              </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <div class="hero-metrics">
+              <div class="metric">
+                <div class="metric-title">Focus</div>
+                <div class="metric-value">Backend APIs</div>
+              </div>
+              <div class="metric">
+                <div class="metric-title">Integrations</div>
+                <div class="metric-value">SP-API, Shopify</div>
+              </div>
+              <div class="metric">
+                <div class="metric-title">Databases</div>
+                <div class="metric-value">PostgreSQL, MongoDB</div>
+              </div>
+              <div class="metric">
+                <div class="metric-title">Cloud</div>
+                <div class="metric-value">AWS</div>
+              </div>
+            </div>
+
+            <div class="mt-4 d-grid gap-2">
+              <a class="btn btn-outline-light" href="#projects">
+                <i class="fas fa-code me-2"></i> View Projects
+              </a>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center">About Me</h2>
-            <div class="row align-items-center mt-4">
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-pad">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-5">
+          <div class="img-card">
+            <img src="assets/img/about.jpg" alt="About Nikhil" class="img-fluid rounded-4 shadow-sm">
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <h2 class="section-title mb-3">About Me</h2>
+          <p class="text-muted mb-3">
+            I’m a backend engineer focused on building production-grade REST APIs, data pipelines,
+            and marketplace sync systems. I’ve worked on real-time SKU inventory/pricing/order sync,
+            analytics services, authentication systems (JWT/RBAC/OTP), and deployments on AWS.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="info-tile">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <div class="label">Location</div>
+                  <div class="value">Mirzapur, Uttar Pradesh</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-tile">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <div class="label">Email</div>
+                  <div class="value">nikhildubey183@gmail.com</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-tile">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <div class="label">Phone</div>
+                  <div class="value">+91 8840425661</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-tile">
+                <i class="fab fa-github"></i>
+                <div>
+                  <div class="label">GitHub</div>
+                  <div class="value">
+                    <a href="https://github.com/NIKHIL-58" target="_blank" rel="noreferrer">github.com/NIKHIL-58</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section-pad bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Skills</h2>
+
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card clean-card h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3"><i class="fas fa-server me-2"></i> Backend & APIs</h5>
+              <div class="tag-wrap">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Async</span>
+                <span class="skill-tag">Swagger</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card clean-card h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3"><i class="fas fa-database me-2"></i> Databases</h5>
+              <div class="tag-wrap">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB Atlas</span>
+                <span class="skill-tag">SQLite</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Schema Design</span>
+                <span class="skill-tag">Indexing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card clean-card h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3"><i class="fas fa-cloud me-2"></i> Cloud & Tools</h5>
+              <div class="tag-wrap">
+                <span class="skill-tag">AWS EC2</span>
+                <span class="skill-tag">AWS RDS</span>
+                <span class="skill-tag">AWS Amplify</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Postman</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card clean-card h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3"><i class="fas fa-lock me-2"></i> Security & Reliability</h5>
+              <div class="tag-wrap">
+                <span class="skill-tag">JWT</span>
+                <span class="skill-tag">RBAC</span>
+                <span class="skill-tag">OTP</span>
+                <span class="skill-tag">Rate Limiting</span>
+                <span class="skill-tag">Retries / Backoff</span>
+                <span class="skill-tag">Token Lifecycle</span>
+                <span class="skill-tag">Logging</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card clean-card h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3"><i class="fas fa-plug me-2"></i> Integrations</h5>
+              <div class="tag-wrap">
+                <span class="skill-tag">Amazon SP-API</span>
+                <span class="skill-tag">Shopify API</span>
+                <span class="skill-tag">Webhooks</span>
+                <span class="skill-tag">Background Jobs</span>
+                <span class="skill-tag">ETL / Data Sync</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section-pad">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+              <div>
+                <h5 class="fw-bold mb-1">Backend Developer — Phormula</h5>
+                <div class="text-muted small">Mar 2025 – Present</div>
+              </div>
+              <span class="badge text-bg-dark">Python • AWS • APIs</span>
+            </div>
+            <ul class="mt-3 mb-0">
+              <li>Built marketplace analytics platform integrating Amazon SP-API + Shopify for real-time SKU sync.</li>
+              <li>Developed REST APIs for inventory, pricing analytics, order tracking, and reporting.</li>
+              <li>Migrated SQLite to PostgreSQL (AWS RDS) and improved schema / performance.</li>
+              <li>Implemented secure admin features using JWT + RBAC + OTP authentication.</li>
+              <li>Improved reliability with throttling, retries/backoff, and token lifecycle handling.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+              <div>
+                <h5 class="fw-bold mb-1">API Developer — Seven Square Technosoft</h5>
+                <div class="text-muted small">Jul 2024 – Mar 2025</div>
+              </div>
+              <span class="badge text-bg-dark">FastAPI • Deployment</span>
+            </div>
+            <ul class="mt-3 mb-0">
+              <li>Developed FastAPI services for transcription and automated PDF generation.</li>
+              <li>Worked on real-time streaming integrations and deployment migration workflows.</li>
+              <li>Improved debugging and documentation for smoother releases.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section-pad bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Projects</h2>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 project-card">
+            <img src="assets/img/snap ai.png" class="card-img-top" alt="Marketplace Analytics"
+              onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="fw-bold">Marketplace Analytics Platform</h5>
+              <p class="text-muted mb-3">
+                Real-time inventory/pricing/order sync using Amazon SP-API + Shopify with PostgreSQL and AWS deployment.
+              </p>
+              <div class="tag-wrap mb-3">
+                <span class="skill-tag">FastAPI/Flask</span>
+                <span class="skill-tag">SP-API</span>
+                <span class="skill-tag">Shopify</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">AWS</span>
+              </div>
+              <a href="https://github.com/NIKHIL-58" target="_blank" rel="noreferrer" class="btn btn-dark w-100">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 project-card">
+            <img src="assets/img/data.png" class="card-img-top" alt="SmartHire"
+              onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="fw-bold">SmartHire (AI Resume Screening)</h5>
+              <p class="text-muted mb-3">
+                Resume ingestion + structured extraction + candidate scoring pipeline with JWT auth and MongoDB.
+              </p>
+              <div class="tag-wrap mb-3">
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">JWT</span>
+                <span class="skill-tag">Scoring</span>
+              </div>
+              <a href="https://github.com/NIKHIL-58" target="_blank" rel="noreferrer" class="btn btn-dark w-100">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card clean-card h-100 project-card">
+            <img src="assets/img/work3.jpg" class="card-img-top" alt="NLP Key Insights API"
+              onerror="this.style.display='none'">
+            <div class="card-body">
+              <h5 class="fw-bold">NLP Key Insights API</h5>
+              <p class="text-muted mb-3">
+                Transformer-based summarization + keyword extraction API with clean endpoints and scalable patterns.
+              </p>
+              <div class="tag-wrap mb-3">
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">NLP</span>
+                <span class="skill-tag">Transformers</span>
+                <span class="skill-tag">Async</span>
+              </div>
+              <a href="https://github.com/NIKHIL-58" target="_blank" rel="noreferrer" class="btn btn-dark w-100">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-pad">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Contact</h2>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5">
+          <div class="card clean-card h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3">Let’s work together</h5>
+              <p class="text-muted">
+                Want to hire me or collaborate? Send a message or reach me on LinkedIn/GitHub.
+              </p>
+
+              <div class="contact-list">
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:nikhildubey183@gmail.com">nikhildubey183@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <a href="tel:+918840425661">+91 8840425661</a>
+                </div>
+                <div class="contact-item">
+                  <i class="fab fa-linkedin"></i>
+                  <a href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/" target="_blank" rel="noreferrer">
+                    linkedin.com/in/nikhil-dubey-1n8i3
+                  </a>
+                </div>
+                <div class="contact-item">
+                  <i class="fab fa-github"></i>
+                  <a href="https://github.com/NIKHIL-58" target="_blank" rel="noreferrer">
+                    github.com/NIKHIL-58
+                  </a>
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <div class="d-flex gap-3">
+                <a href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/" class="social-btn" target="_blank" rel="noreferrer">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/NIKHIL-58" class="social-btn" target="_blank" rel="noreferrer">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-btn" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-btn" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="card clean-card h-100">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3">Send a message</h5>
+
+              <!-- Simple mailto form (works without backend) -->
+              <form id="contactForm" class="row g-3">
                 <div class="col-md-6">
-                    <img src="assets/img/about.jpg" alt="About Me" class="img-fluid rounded shadow">
+                  <label class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter name" required>
                 </div>
+
                 <div class="col-md-6">
-                    <h3>I'm Nikhil Dubey</h3>
-                    <p>
-                        I am a Python Developer with expertise in frameworks like Flask and FastAPI, passionate about
-                        building efficient APIs and robust software solutions. I specialize in delivering impactful
-                        software solutions by combining innovative machine learning techniques with programming
-                        expertise.
-                    </p>
+                  <label class="form-label">Your Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" required>
                 </div>
+
+                <div class="col-12">
+                  <label class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Write your message..."
+                    required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-dark btn-lg w-100">
+                    <i class="fas fa-paper-plane me-2"></i> Send
+                  </button>
+                  <p class="small text-muted mt-2 mb-0">
+                    This opens your email app (no backend needed).
+                  </p>
+                </div>
+              </form>
+
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center">Skills</h2>
-            <div class="row mt-4">
-                <div class="col-md-6">
-                    <h4>Programming Languages & Frameworks</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item">Python, Machine Learning</li>
-                        <li class="list-group-item">Flask, FastAPI</li>
-                        <li class="list-group-item">HTML, CSS, JavaScript</li>
-                        <li class="list-group-item">C++, OOPs</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h4>Tools & Libraries</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item">Pandas, NumPy, Matplotlib, SciPy, NLP</li>
-                        <li class="list-group-item">Scikit-learn, TensorFlow, PyTorch</li>
-                        <li class="list-group-item">Postman, Docker, Git</li>
-                        <li class="list-group-item">VS Code, Colab, Swagger</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Projects</h2>
-            <div class="row mt-4">
-                <!-- Snap AI -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/img/snap ai.png" class="card-img-top" alt="Snap AI">
-                        <div class="card-body">
-                            <h5 class="card-title">Snap AI</h5>
-                            <p class="card-text">API using FastAPI to transcribe audio and video files into text and PDF
-                                formats.</p>
-                            <a href="https://github.com/NIKHIL-58" target="_blank" class="btn btn-primary">
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  <!-- FOOTER -->
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+      <div class="mb-2">
+        <strong>Nikhil Dubey</strong> • Backend Engineer (Python)
+      </div>
+      <div class="text-light-emphasis small">
+        © <span id="year"></span> All Rights Reserved.
+      </div>
+    </div>
+  </footer>
 
-                <!-- Data Visualization Dashboard -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/img/data.png" class="card-img-top" alt="Visualization App">
-                        <div class="card-body">
-                            <h5 class="card-title">Data Visualization Dashboard</h5>
-                            <p class="card-text">Flask-based app with dynamic filtering and interactive visualizations.
-                            </p>
-                            <a href="https://github.com/NIKHIL-58/data_visualization_dashboards" target="_blank"
-                                class="btn btn-primary">
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Film Fusion -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/img/work3.jpg" class="card-img-top" alt="Film Fusion">
-                        <div class="card-body">
-                            <h5 class="card-title">Film Fusion</h5>
-                            <p class="card-text">Real-time web app with user-tailored movie recommendations.</p>
-                            <a href="https://github.com/NIKHIL-58/Film-fusion" target="_blank" class="btn btn-primary">
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-
-    <!-- Contact Us Section -->
-    <section class="contact py-5" id="contact">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Us</h2>
-            <p class="text-center text-muted mb-5">We would love to hear from you! Get in touch with us through any of
-                the following options.</p>
-
-            <div class="row g-4">
-                <!-- Address Card -->
-                <div class="col-md-4 text-center">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body">
-                            <i class="fas fa-map-marker-alt text-primary fs-1 mb-3"></i>
-                            <h3 class="h5">Address</h3>
-                            <p class="text-muted">Mirzapur Uttar Pradesh 231001</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Phone Card -->
-                <div class="col-md-4 text-center">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body">
-                            <i class="fas fa-phone text-primary fs-1 mb-3"></i>
-                            <h3 class="h5">Phone</h3>
-                            <p class="text-muted">+91 8840425661</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Email Card -->
-                <div class="col-md-4 text-center">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body">
-                            <i class="fas fa-envelope text-primary fs-1 mb-3"></i>
-                            <h3 class="h5">Email</h3>
-                            <p class="text-muted">nikhildubey183@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="text-center mt-5">
-                <h4 class="mb-3">Follow Us</h4>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="#" class="text-primary fs-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-primary fs-3"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/nikhil-dubey-1n8i3/" class="text-primary fs-3"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="text-primary fs-3"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-3 bg-dark text-light">
-        <p>&copy; 2024 Nikhil Dubey. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
