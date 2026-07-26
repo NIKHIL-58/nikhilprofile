@@ -23,3 +23,7 @@ html[data-theme="light"]{--bg:#f7f9fc;--bg-elevated:#fff;--bg-soft:#eef3f8;--sur
 .art-film:has(.project-shot)::after{background:linear-gradient(to top,rgba(8,17,31,.4),transparent 60%)}
 @media(max-width:820px){.about-photo{max-width:620px;aspect-ratio:16/10}.art-echotale .project-shot{min-height:330px}}
 @media(max-width:600px){.about-photo{margin-top:28px;aspect-ratio:4/3}.art-echotale .project-shot{min-height:250px}}
+
+/* Hero photo selected by Nikhil */
+.portrait-wrap .hero-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 48%;filter:none}
+.portrait-wrap:has(.hero-photo)::after{z-index:1;background:linear-gradient(to top,rgba(8,17,31,.5),transparent 45%);border:0;border-radius:0;inset:0;height:auto}
