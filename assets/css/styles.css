@@ -36,3 +36,4 @@ html[data-theme="light"]{--bg:#f7f9fc;--bg-elevated:#fff;--bg-soft:#eef3f8;--sur
 .form-status{min-height:18px;margin:-2px 0 0;color:#9fb0c6;font-size:11px;text-align:center}
 .form-status.success{color:#70e1c2}
 .form-status.error{color:#ff9e9e}
+.art-echotale .project-number,.art-smarthire .project-number{color:#30445d}
