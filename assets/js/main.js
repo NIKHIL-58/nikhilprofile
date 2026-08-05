@@ -66,15 +66,48 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 
 const contactForm = document.getElementById("contactForm");
-contactForm.addEventListener("submit", (event) => {
+const formStatus = document.getElementById("formStatus");
+
+contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+
+  if (!contactForm.reportValidity()) return;
+
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const submitLabel = submitButton.querySelector("span");
   const formData = new FormData(contactForm);
-  const subject = formData.get("subject").trim();
-  const body = [
-    `Name: ${formData.get("name").trim()}`,
-    `Email: ${formData.get("email").trim()}`,
-    "",
-    formData.get("message").trim(),
-  ].join("\r\n");
-  window.location.href = `mailto:nikhildubey183@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const payload = Object.fromEntries(formData.entries());
+  payload._replyto = payload.email;
+
+  submitButton.disabled = true;
+  submitLabel.textContent = "Sending…";
+  formStatus.className = "form-status";
+  formStatus.textContent = "Sending your message…";
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json();
+    if (!response.ok || !(result.success === true || result.success === "true")) {
+      throw new Error(result.message || "Unable to send message");
+    }
+
+    contactForm.reset();
+    formStatus.className = "form-status success";
+    formStatus.textContent = "Thanks — your message was sent successfully. I’ll reply by email.";
+  } catch (error) {
+    formStatus.className = "form-status error";
+    formStatus.textContent = "The message could not be sent. Please email me directly at nikhildubey183@gmail.com.";
+  } finally {
+    submitButton.disabled = false;
+    submitLabel.textContent = "Send message";
+  }
 });
+
