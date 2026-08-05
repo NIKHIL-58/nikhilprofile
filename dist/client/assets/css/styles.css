@@ -27,3 +27,13 @@ html[data-theme="light"]{--bg:#f7f9fc;--bg-elevated:#fff;--bg-soft:#eef3f8;--sur
 /* Hero photo selected by Nikhil */
 .portrait-wrap .hero-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 48%;filter:none}
 .portrait-wrap:has(.hero-photo)::after{z-index:1;background:linear-gradient(to top,rgba(8,17,31,.5),transparent 45%);border:0;border-radius:0;inset:0;height:auto}
+
+/* Project screenshots and direct-email form */
+.art-echotale .project-shot{object-fit:contain;padding:18px;background:#f2eef5}
+.art-smarthire .project-shot{object-fit:contain;background:#edf2fb}
+.form-honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+.button-light:disabled{cursor:wait;opacity:.72;transform:none;box-shadow:none}
+.form-status{min-height:18px;margin:-2px 0 0;color:#9fb0c6;font-size:11px;text-align:center}
+.form-status.success{color:#70e1c2}
+.form-status.error{color:#ff9e9e}
+.art-echotale .project-number,.art-smarthire .project-number{color:#30445d}
